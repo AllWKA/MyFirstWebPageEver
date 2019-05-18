@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Creador de Historias</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../css/perfil.css">
+		<link rel="stylesheet" href="../css/index.css">
+		<script src="../js/CreaHistoria.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+		<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyCwT__bdYEloyJZj9A13s9UO6j5yfkUCDY",
+			authDomain: "test-8fba9.firebaseapp.com",
+			databaseURL: "https://test-8fba9.firebaseio.com",
+			projectId: "test-8fba9",
+			storageBucket: "test-8fba9.appspot.com",
+			messagingSenderId: "1075936247753"
+		};
+		firebase.initializeApp(config);
+	</script>
+	</head>
+	<body class="fondo">
+		<nav class="navbar navbar-expand-sm sticky-top">
+			<a href="../index.html" class="menu-titulo">AllenWalkerAlbarnGames</a>
+
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown menu">
+					<a class="nav-link dropdown-toggle menu" data-toggle="dropdown">
+						Usuario
+					</a>
+					<div class="dropdown-menu menu">
+						<a  href="secciones/crearUsuario.html" class="nav-link menu">Registrate</a>
+						<a  href="secciones/autenticacion.html" class="nav-link menu">Iniciar seción</a>
+						<a  href="secciones/autenticacion.html" class="nav-link menu hidden">Cerrar seción</a>
+						<a  href="secciones/autenticacion.html" class="nav-link menu hidden">Perfil</a>
+					</div>
+				</li>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown menu">
+					<a class="nav-link dropdown-toggle menu" data-toggle="dropdown">
+						Juegos
+					</a>
+					<div class="dropdown-menu">
+						<a href="MittyLaInmortal/index.html" class="nav-link menu"><br>Mitty La Inmortal.</a>
+						<a href="BlackStories/index.html"  class="nav-link menu"><br>Historias Toh Negras.</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<img src="../media/usuario.jpg" alt="IMGPErfil" id="fotoHistoria" class="img-thumbnail imgfix">
+					<p class="titulo i">Cambiar Imagen:</p>
+					<input type="file" name="fichero" class="cambimg">
+				</div>
+				<div class="col-sm-6">
+					<div class="row">
+						<form action="index.html" method="post">
+							<div class="form-group" id="formulario">
+								<p class="titulo">Título:</p>
+								<input type="text" id="titulo" name="nick" value="">
+								<p class="titulo">Solución:</p>
+								<input type="text" name="bio" id="solucion" class="descr" >
+							</div>
+							<button type="button" name="bio" id="crearHistoria" class="btn btn-primary">Crear Historia</button>
+						</form>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

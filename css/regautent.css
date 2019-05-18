@@ -1,0 +1,18 @@
+.fondo{
+	background-color: black;
+}
+.menu{
+	font-size: 30px;
+	text-align: center;
+	color: #00ffcc;
+}
+.menu-titulo{
+	font-size: 30px;
+	text-align: center;
+	color: #0099ff;
+}
+label{
+	font-size: 30px;
+	color: white;
+
+}

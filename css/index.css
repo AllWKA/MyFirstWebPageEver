@@ -1,0 +1,84 @@
+.menu{
+	font-size: 30px;
+	text-align: center;
+	color: blue;
+}
+.menu-titulo{
+	font-size: 30px;
+	text-align: center;
+	color: #0099ff;
+}
+.der{
+	text-align: right;
+}
+.izq{
+	text-align: left;
+}
+.hidden{
+	visibility: hidden;
+}
+nav{
+	background-color: black;
+	border-style: double;
+	border-color: grey;
+}
+
+a{
+	font-size: 30px;
+	color: red;
+}
+
+a:link {
+
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    background-color: black;
+    border-style: double;
+    border-color: grey;
+}
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #1a0d00;
+  border-style: double;
+  border-color: #ff8000;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: black;
+  border-style: double;
+  border-color: grey;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 15%;
+}

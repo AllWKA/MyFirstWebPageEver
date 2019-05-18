@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Sala 1</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyCwT__bdYEloyJZj9A13s9UO6j5yfkUCDY",
+		authDomain: "test-8fba9.firebaseapp.com",
+		databaseURL: "https://test-8fba9.firebaseio.com",
+		projectId: "test-8fba9",
+		storageBucket: "test-8fba9.appspot.com",
+		messagingSenderId: "1075936247753"
+	};
+	firebase.initializeApp(config);
+</script>
+<script src="../js/juego.js"></script>
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/Juego.css">
+
+</head>
+<body class="back-ground">
+	<div class="container">
+		<div class="container"> <!-- Menu -->
+			<nav class="navbar navbar-expand-sm box navbar-dark">
+				<a class="navbar-brand" href="../index.html">
+					<p class = "pp negrita">Black Stories</p>
+				</a>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="Juego.html">
+							<p class="cuerpo menu">Juego</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../../MittyLaInmortal/index.html">
+							<p class="cuerpo menu">Mitty La Inmortal</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../../index.html">
+							<p class="cuerpo menu">AWllKA Games</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="modal fade" id="pedirNombre"><!--pedir nombre:-->
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="cuerpo modal-title">Escribe tu Nick</h4>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+						<form action="index.html" method="post" id="enviarNombre">
+							<input type="text" name="nombre" placeholder="pepeJuan" id="nombreJugador">
+							<button type="submit" class="btn btn-dark" name="button" >Crear</button>
+							<p>Tu nombre no puede contener "Master".</p>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="muestraComandos"><!--muestra Comandos:-->
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Comandos:</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+
+						<strong>/elegirHistoria lista: </strong> muestra la lista de las historias. <br>
+						<strong>/elegirHistoria n: </strong> carga la historias n elegida, siendo n el indice de la historia en la lista. <br>
+						<strong>/limpiar: </strong> limpia momentaneamente el chat. <br>
+						<strong>/cambiarNombre: </strong> Cambia tu nombre actual, pilla la cadena que escribas acontinuación del comando. <br>
+						<strong>/elegirMaster lista: </strong> Muestra los usuarios disponibles. <br>
+						<strong>/elegirMaster 'nombre': </strong> Elije la persona que va a responder. <br>
+						<strong> <br>CONSEJO: </strong> Elije el master antes de cargar una historia o elije al bot.
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row"> <!--historia actual, chat e input-->
+			<div class="col-sm-4 box">
+				<p class="cuerpo">Historia Actual: </p>
+				<div class="container jumbotron" id="actual"></div>
+			</div>
+			<div class="col-sm-8 box">
+				<div class="row">
+					<p class="cuerpo">Chat: </p>
+				</div>
+				<div class="row">
+					<div class="container jumbotron" id="chat"></div>
+				</div>
+				<div class="row">
+					<form class="" action="index.html" method="post" id="boton">
+						<label for="mensaje" class="cuerpo"> mensaje:</label>
+						<input type="text" name="mensaje" placeholder="Mensaje... " id="mensaje">
+						<button type="submit" name="button">Enviar</button>
+						<button type="button" name="button" id="comandos">Comandos</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="row box"><!--chat de master-->
+			<div class="col-sm-2">
+
+			</div>
+			<div class="col-sm-10">
+				<div class="container jumbotron" id="solucion">
+
+				</div>
+			</div>
+		</div>
+		<div class="row box">
+			<div class="col-sm-2">
+				<p class="cuerpo">Jugadores:</p>
+			</div>
+			<div class="container jumbotron" id="jugadores"></div>
+		</div>
+	</div>
+
+</body>
+</html>

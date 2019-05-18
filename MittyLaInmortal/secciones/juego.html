@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../css/styles.css">
+	<script src="../Js/game.js"></script>
+	<meta charset="utf-8"/>
+	<title>Juego</title>
+</head>
+<body class="fondo" id="body">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand titulo" href="../index.html">Mitty La Inmortal</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+				  <li><a href="juego.html">Juego</a></li>
+				  <li><a href="galeria.html">Manga</a></li>
+				  <li> <a href="../../BlackStories/index.html">Historias Toh Negras</a> </li>
+					<li class="nav-item">
+						<a class="nav-link" href="../../index.html">
+							<p class="menu">AWllKA Games</p>
+						</a>
+					</li>
+				</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a  href="registrar.html"><span class="glyphicon glyphicon-user"></span>    Regístrate</a></li>
+						<li><a  href="iniciarsecion.html"><span class="glyphicon glyphicon-log-in"></span>    Iniciar seción</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row"><!--contenido-->
+				<div class="row" style="background-color: black" id="juego">
+					<!-- crear modal aqui-->
+					<div class="modal fade" id="tuto" role="dialog">
+						<div class="modal-dialog">
+
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="tuto">&times;</button>
+									<h4 class="modal-title">Instrucciones:</h4>
+								</div>
+								<div class="modal-body">
+									<p class="titulo3">
+										Mata a mitty:
+										<br>-Ataque: hace daño físico o mágico.
+										<br>-Objetos: pociones de vda o de mana.
+										<br>//No puedes realizar un ataque mágico sin maná, cada ataque mágico tiene un coste de maná
+									</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog">
+
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="mymodal">&times;</button>
+									<h4 class="modal-title">Datos del Jugador</h4>
+								</div>
+								<div class="modal-body">
+									<form action="/action_page.php">
+										Nombre <input type="text" name="FirstName" placeholder="Mitty" id="nombre" ><br>
+										Fecha de Nacimiento   <input type="date" name="LastName" id="edad"><br>
+										Fondo:
+										<br/>
+										<label><input type="checkbox" checked id="rojo">rojo</label>
+										<label><input type="checkbox" checked id="azul">azúl</label>
+										<label><input type="checkbox" checked id="negro">negro</label>
+										<br/>
+										<input type="submit" value="Crear" id="botton" data-dismiss="mymodal">
+									</form>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row "><!-- enemigo/vndedor -->
+						<div class="col-sm-6 dialogo">
+							<p id="cajaMitty"></p>
+						</div>
+						<div class="col-sm-6">
+							<div class="col-sm-6">
+								<img src="../img/sprites/mittycurse.png" alt="enemy" height="200" id="mitty">
+							</div>
+							<div class="col-sm-6 dialogo">
+								<div class="row">
+									<p class="name">Mitty</p>
+								</div>
+								<div class="row" id="statsMitty">
+									<p>vida: </p>
+									<p>mana: </p>
+									<p>Pociones Vida: </p>
+									<p>Pociones Maná: </p>
+									<p>A.D. : </p>
+									<p>A.P. : </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row"><!-- heroe -->
+						<div class="col-sm-6" >
+							<div class="col-sm-6 dialogo">
+								<div class="row" id="statsNanachi">
+									<p class="name">Nanachi</p>
+									<p>vida: </p>
+									<p>maná: </p>
+									<p>Pociones Vida: </p>
+									<p>Pociones Maná: </p>
+									<p>A.D. : </p>
+									<p>A.P. : </p>
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<img src="../img/sprites/nanachi.jpg" alt="enemy" height="200" >
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="col-sm-6 dialogo"><!-- cajatexto -->
+								<p id="cajaNanachi"></p>
+							</div>
+							<div class="col-sm-6"><!-- opciones -->
+								<div class="btn-group">
+									<div class="btn-group">
+										<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-size: 45px">
+											Atacar</button>
+											<ul class="dropdown-menu" role="menu">
+												<li><a id="AdNanachi" href="#" style="font-size: 20px">Ataque Físico</a></li>
+												<li id="ApNanachi"><a href="#" style="font-size: 20px">Ataque Mágico</a></li>
+											</ul>
+										</div>
+										<div class="btn-group">
+											<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-size: 35px">
+												Objetos</button>
+												<ul class="dropdown-menu" role="menu">
+													<li id="PVNanachi"><a href="#" style="font-size: 20px">Poción Vida</a></li>
+													<li id="PMNanachi"><a href="#" style="font-size: 20px">Poción Maná</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="jumbotron">
+							<h1 style="text-align: center">Niveles</h1>
+							<table class="table table-striped">
+								<thead>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="titulo4">Level1</td>
+									<td class="titulo4">500-pts</td>
+								</tr>
+								<tr>
+									<td class="titulo4">Level1</td>
+									<td class="titulo4">1000-pts</td>
+								</tr>
+								<tr>
+									<td class="titulo4">Level1</td>
+									<td class="titulo4">1500-pts</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</body>
+		</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Juego</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCwT__bdYEloyJZj9A13s9UO6j5yfkUCDY",
+    authDomain: "test-8fba9.firebaseapp.com",
+    databaseURL: "https://test-8fba9.firebaseio.com",
+    projectId: "test-8fba9",
+    storageBucket: "test-8fba9.appspot.com",
+    messagingSenderId: "1075936247753"
+  };
+  firebase.initializeApp(config);
+</script>
+
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/Juego.css">
+	<script src="../js/Salas.js"></script>
+
+</head>
+<body class="back-ground">
+	<div class="container">
+
+		<div class="container"> <!-- Menu -->
+			<nav class="navbar navbar-expand-sm box navbar-dark">
+				<a class="navbar-brand" href="../index.html">
+					<p class = "pp negrita">Black Stories</p>
+				</a>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="Juego.html">
+							<p class="cuerpo menu">Juego</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../../MittyLaInmortal/index.html">
+							<p class="cuerpo menu">Mitty La Inmortal</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../../index.html">
+							<p class="cuerpo menu">AllWKA Games</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="row rrow">
+			<div class="col-sm-4">
+				<p> <a href="sala1.html" class = "salaLink salas">Sala 1</a> </p>
+				<p class="cuerpo">Historia actual: </p>
+				<p id="actual" class="cuerpo"></p>
+			</div>
+			<div class="col-sm-4">
+				<p class="cuerpo">Sala 2 (proximamente...)</p>
+				<p class="cuerpo">Historia actual: </p>
+			</div>
+			<div class="col-sm-4"><
+				<p class="cuerpo">Sala 3 (proximamente...)</p>
+				<p class="cuerpo">Historia actual: </p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

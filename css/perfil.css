@@ -1,0 +1,55 @@
+.imgfix{
+	height: 30%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: white;
+	margin-top: 10px;
+	margin-left: 100px;
+}
+.menu-titulo{
+	font-size: 30px;
+	text-align: center;
+	color: #0099ff;
+}
+.titulo{
+	font-size: 20px;
+	color: white;
+	font-style: italic;
+
+}
+.menu{
+	margin-left: 50px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+.fondo{
+	background-color: black;
+}
+.i{
+	margin-left: 100px;
+}
+
+.descr{
+	height: 100px;
+
+}
+.cambimg{
+	margin-left: 100px;
+}
+.hidden{
+	visibility: hidden;
+}
+ul{
+	margin-left: 100px;
+}
+button{
+	margin-top: 20px;
+}
+input{
+	width: 150%;
+	
+}
+form{
+	margin-top: 10px;
+}
